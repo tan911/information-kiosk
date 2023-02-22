@@ -1,10 +1,8 @@
-import Position from '../models/position';
+import Branches from '../models/branches';
+import Departments from '../models/departments';
 
-export const employeePosition = [
-  new Position('p1', 'Mayor Office', '#38bdf8'),
-  new Position('p2', 'Vice Mayor Office', '#38bdf8'),
-  new Position('p3', 'Vice Mayor Office', '#38bdf8'),
-  new Position('p4', 'Vice Mayor Office', '#38bdf8'),
-  new Position('p5', 'Vice Mayor Office', '#38bdf8'),
-  new Position('p6', 'Vice Mayor Office', '#38bdf8'),
+export const CATEGORIES = [
+  new Branches('p1', 'EXECUTIVE'),
+  new Branches('p2', 'LEGISLATIVE'),
+  new Branches('p3', 'REMOTE OFFICES'),
 ];
