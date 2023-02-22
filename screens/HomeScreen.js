@@ -1,30 +1,21 @@
 import {
   View,
-  Text,
   SafeAreaView,
   StyleSheet,
   Platform,
-  FlatList,
   TextInput,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useLayoutEffect } from 'react';
-import Icon from "react-native-vector-icons/EvilIcons"
+import Icon from 'react-native-vector-icons/EvilIcons';
 
-import { employeePosition } from '../data/data-employee';
-import PositionGridTile from '../components/PositionGridTile';
+import Categories from '../components/Categories';
 
-function renderEmployee(data) {
-  return (
-    <PositionGridTile position={data.item.position} color={data.item.color} />
-  );
-}
-
-function HomeScreen() {
-  const navigation = useNavigation();
+function HomeScreen({ navigation }) {
+  const navigationNav = useNavigation();
 
   useLayoutEffect(() => {
-    navigation.setOptions({
+    navigationNav.setOptions({
       headerShown: false,
     });
   }, []);
@@ -32,19 +23,17 @@ function HomeScreen() {
   return (
     <SafeAreaView style={styles.androidSafeArea}>
       <View style={styles.rootContainer}>
-        <Text>Home</Text>
         <View style={styles.searchBox}>
-          <Icon size={30} name="search" color="#9ca3af"/>
-          <TextInput placeholder='Search...' keyboardType="default"/>
+          <Icon size={30} name="search" color="#9ca3af" />
+          <View style={styles.inputContainer}>
+            <TextInput
+              placeholder="Ex. MICS Department"
+              keyboardType="default"
+            />
+          </View>
         </View>
         <View style={styles.positionsContainer}>
-          <FlatList
-            key={'#'}
-            data={employeePosition}
-            keyExtractor={item => item.id}
-            renderItem={renderEmployee}
-            numColumns={2}
-          />
+          <Categories navigation={navigation} />
         </View>
       </View>
     </SafeAreaView>
@@ -60,11 +49,12 @@ const styles = StyleSheet.create({
   rootContainer: {
     flex: 1,
     backgroundColor: '#eff6ff',
+    justifyContent: 'center',
   },
   searchBox: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: "#e0f2fe",
+    backgroundColor: '#e0f2fe',
     paddingVertical: 12,
     paddingHorizontal: 10,
     borderRadius: 10,
@@ -76,8 +66,12 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 8,
   },
+  inputContainer: {
+    flex: 1,
+  },
   positionsContainer: {
     marginHorizontal: 16,
-    marginVertical: 20,
+    marginTop: 20,
+    marginBottom: 20,
   },
 });
