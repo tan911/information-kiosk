@@ -4,6 +4,7 @@ import {
   StyleSheet,
   Platform,
   TextInput,
+  ImageBackground,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useLayoutEffect } from 'react';
@@ -23,18 +24,24 @@ function HomeScreen({ navigation }) {
   return (
     <SafeAreaView style={styles.androidSafeArea}>
       <View style={styles.rootContainer}>
-        <View style={styles.searchBox}>
-          <Icon size={30} name="search" color="#9ca3af" />
-          <View style={styles.inputContainer}>
-            <TextInput
-              placeholder="Ex. MICS Department"
-              keyboardType="default"
-            />
+        <ImageBackground
+          source={require('../assets/map/cebumap.jpg')}
+          resizeMode="cover"
+          style={styles.rootContainer}
+          imageStyle={styles.backgroundImage}>
+          <View style={styles.searchBox}>
+            <Icon size={30} name="search" color="#9ca3af" />
+            <View style={styles.inputContainer}>
+              <TextInput
+                placeholder="Ex. MICS Department"
+                keyboardType="default"
+              />
+            </View>
           </View>
-        </View>
-        <View style={styles.positionsContainer}>
-          <Categories navigation={navigation} />
-        </View>
+          <View style={styles.positionsContainer}>
+            <Categories navigation={navigation} />
+          </View>
+        </ImageBackground>
       </View>
     </SafeAreaView>
   );
@@ -48,8 +55,10 @@ const styles = StyleSheet.create({
   },
   rootContainer: {
     flex: 1,
-    backgroundColor: '#eff6ff',
     justifyContent: 'center',
+  },
+  backgroundImage: {
+    opacity: 0.9,
   },
   searchBox: {
     flexDirection: 'row',
