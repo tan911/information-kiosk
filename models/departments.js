@@ -1,32 +1,20 @@
 class Departments {
   constructor(
     id,
-    categoryIds,
+    departmentIds,
     title,
-    affordability,
-    complexity,
-    imageUrl,
-    duration,
-    ingredients,
-    steps,
-    isGlutenFree,
-    isVegan,
-    isVegetarian,
-    isLactoseFree
+    departmentHead,
+    contactNumber,
+    imageMap,
+    location
   ) {
     this.id = id;
-    this.categoryIds = categoryIds;
+    this.departmentIds = departmentIds;
     this.title = title;
-    this.imageUrl = imageUrl;
-    this.ingredients = ingredients;
-    this.steps = steps;
-    this.duration = duration;
-    this.complexity = complexity;
-    this.affordability = affordability;
-    this.isGlutenFree = isGlutenFree;
-    this.isVegan = isVegan;
-    this.isVegetarian = isVegetarian;
-    this.isLactoseFree = isLactoseFree;
+    this.imageMap = imageMap;
+    this.departmentHead = departmentHead;
+    this.contactNumber = contactNumber;
+    this.location = location;
   }
 }
 
