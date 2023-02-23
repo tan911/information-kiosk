@@ -16,6 +16,7 @@ function Categories({ navigation }) {
         position={data.item.position}
         color={data.item.color}
         onPress={presshandler}
+        branch={data.item.position}
       />
     );
   }
