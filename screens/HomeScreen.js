@@ -1,11 +1,4 @@
-import {
-  View,
-  SafeAreaView,
-  StyleSheet,
-  Platform,
-  TextInput,
-  ImageBackground,
-} from 'react-native';
+import { View, SafeAreaView, StyleSheet, Platform, TextInput, ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useLayoutEffect } from 'react';
 import Icon from 'react-native-vector-icons/EvilIcons';
@@ -28,14 +21,12 @@ function HomeScreen({ navigation }) {
           source={require('../assets/map/cebumap.jpg')}
           resizeMode="cover"
           style={styles.rootContainer}
-          imageStyle={styles.backgroundImage}>
+          imageStyle={styles.backgroundImage}
+        >
           <View style={styles.searchBox}>
             <Icon size={30} name="search" color="#9ca3af" />
             <View style={styles.inputContainer}>
-              <TextInput
-                placeholder="Ex. MICS Department"
-                keyboardType="default"
-              />
+              <TextInput placeholder="Ex. MICS Department" keyboardType="default" />
             </View>
           </View>
           <View style={styles.positionsContainer}>

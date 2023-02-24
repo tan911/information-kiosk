@@ -1,10 +1,4 @@
-import {
-  Pressable,
-  View,
-  Text,
-  StyleSheet,
-  ImageBackground,
-} from 'react-native';
+import { Pressable, View, Text, StyleSheet, ImageBackground } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 function PositionGridTile({ position, color, image, onPress }) {
@@ -14,7 +8,8 @@ function PositionGridTile({ position, color, image, onPress }) {
         source={image}
         resizeMode="stretch"
         style={styles.innerContainer}
-        imageStyle={styles.backgroundImage}>
+        imageStyle={styles.backgroundImage}
+      >
         <Pressable style={styles.buttonBox} onPress={onPress}>
           <View style={styles.innerContainer}>
             <Text style={styles.text}>{position}</Text>

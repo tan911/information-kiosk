@@ -25,7 +25,7 @@ function Categories({ navigation }) {
     <FlatList
       key={'_'}
       data={CATEGORIES}
-      keyExtractor={item => item.id}
+      keyExtractor={(item) => item.id}
       renderItem={renderEmployee}
       numColumns={1}
     />

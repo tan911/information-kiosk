@@ -1,13 +1,5 @@
 class Departments {
-  constructor(
-    id,
-    departmentIds,
-    title,
-    departmentHead,
-    contactNumber,
-    imageMap,
-    location
-  ) {
+  constructor(id, departmentIds, title, departmentHead, contactNumber, imageMap, location) {
     this.id = id;
     this.departmentIds = departmentIds;
     this.title = title;

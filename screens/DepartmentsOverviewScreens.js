@@ -6,11 +6,11 @@ import DisplayedDepartment from '../components/DisplayedDepartment';
 function DepartmentsOverviewScreen({ route }) {
   const catID = route.params.categoryID;
 
-  const departments = DEPARTMENTS.filter(dept => {
+  const departments = DEPARTMENTS.filter((dept) => {
     return dept.departmentIds.indexOf(catID) >= 0;
   });
 
-  const renderDepartments = data => {
+  const renderDepartments = (data) => {
     return <DisplayedDepartment title={data.item.title} />;
   };
 
@@ -18,7 +18,7 @@ function DepartmentsOverviewScreen({ route }) {
     <View style={styles.container}>
       <FlatList
         data={departments}
-        keyExtractor={item => item.id}
+        keyExtractor={(item) => item.id}
         renderItem={renderDepartments}
       />
     </View>

@@ -1,11 +1,4 @@
-import {
-  View,
-  Text,
-  StatusBar,
-  StyleSheet,
-  ImageBackground,
-  Image,
-} from 'react-native';
+import { View, Text, StatusBar, StyleSheet, ImageBackground, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useLayoutEffect } from 'react';
 
@@ -26,11 +19,7 @@ function SplashScreen({ navigation }) {
 
   return (
     <View style={styles.rootContainer}>
-      <StatusBar
-        barStyle="light-content"
-        hidden={false}
-        backgroundColor={Colors.secondaryEx}
-      />
+      <StatusBar barStyle="light-content" hidden={false} backgroundColor={Colors.secondaryEx} />
       <Image
         source={require('../assets/brachesImages/cebucityseal.png')}
         style={styles.imageSeal}
