@@ -15,8 +15,8 @@ function Categories({ navigation }) {
       <PositionGridTile
         position={data.item.position}
         color={data.item.color}
+        image={data.item.image}
         onPress={presshandler}
-        branch={data.item.position}
       />
     );
   }
