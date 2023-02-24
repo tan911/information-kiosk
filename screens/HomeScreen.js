@@ -1,21 +1,24 @@
-import { View, SafeAreaView, StyleSheet, Platform, TextInput, ImageBackground } from 'react-native';
+import { View, SafeAreaView, StyleSheet, Platform, ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useLayoutEffect } from 'react';
-import Icon from 'react-native-vector-icons/EvilIcons';
+import { StatusBar } from 'expo-status-bar';
 
 import Categories from '../components/Categories';
+import Search from '../components/Search';
 
 function HomeScreen({ navigation }) {
   const navigationNav = useNavigation();
 
   useLayoutEffect(() => {
     navigationNav.setOptions({
-      headerShown: false,
+      headerShown: true,
+      headerTitle: 'Branch',
     });
   }, []);
 
   return (
     <SafeAreaView style={styles.androidSafeArea}>
+      <StatusBar barStyle="light-content" hidden={false} />
       <View style={styles.rootContainer}>
         <ImageBackground
           source={require('../assets/map/cebumap.jpg')}
@@ -23,12 +26,7 @@ function HomeScreen({ navigation }) {
           style={styles.rootContainer}
           imageStyle={styles.backgroundImage}
         >
-          <View style={styles.searchBox}>
-            <Icon size={30} name="search" color="#9ca3af" />
-            <View style={styles.inputContainer}>
-              <TextInput placeholder="Ex. MICS Department" keyboardType="default" />
-            </View>
-          </View>
+          <Search navigation={navigation} />
           <View style={styles.positionsContainer}>
             <Categories navigation={navigation} />
           </View>
@@ -46,28 +44,10 @@ const styles = StyleSheet.create({
   },
   rootContainer: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
   },
   backgroundImage: {
     opacity: 0.9,
-  },
-  searchBox: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#e0f2fe',
-    paddingVertical: 12,
-    paddingHorizontal: 10,
-    borderRadius: 10,
-    marginHorizontal: 20,
-    marginTop: 10,
-    elevation: 2,
-    shadowColor: '#57534e',
-    shadowOpacity: 0.25,
-    shadowOffset: { width: 0, height: 2 },
-    shadowRadius: 8,
-  },
-  inputContainer: {
-    flex: 1,
   },
   positionsContainer: {
     marginHorizontal: 16,
