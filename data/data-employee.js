@@ -1,10 +1,26 @@
 import Branches from '../models/branches';
 import Departments from '../models/departments';
+import Colors from '../utils/colors';
 
 export const CATEGORIES = [
-  new Branches('b1', 'EXECUTIVE'),
-  new Branches('b2', 'LEGISLATIVE'),
-  new Branches('b3', 'REMOTE OFFICES'),
+  new Branches(
+    'b1',
+    'EXECUTIVE',
+    [Colors.primaryEx, Colors.secondaryEx],
+    require('../assets/brachesImages/executive.png')
+  ),
+  new Branches(
+    'b2',
+    'LEGISLATIVE',
+    [Colors.primaryLeg, Colors.secondaryLeg],
+    require('../assets/brachesImages/legislativetype.webp')
+  ),
+  new Branches(
+    'b3',
+    'REMOTE OFFICES',
+    [Colors.primaryRem, Colors.secondaryRem],
+    require('../assets/brachesImages/remote.jpg')
+  ),
 ];
 
 export const DEPARTMENTS = [
