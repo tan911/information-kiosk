@@ -7,37 +7,17 @@ import {
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
-import Colors from '../utils/colors';
-
-function PositionGridTile({ position, onPress, branch }) {
-  let primary, secondary, branchImage;
-
-  switch (branch) {
-    case 'EXECUTIVE':
-      (primary = Colors.primaryEx),
-        (secondary = Colors.secondaryEx),
-        (branchImage = '../assets/brachesImages/executive.png');
-      break;
-    case 'LEGISLATIVE':
-      (primary = Colors.primaryLeg), (secondary = Colors.secondaryLeg);
-      break;
-    case 'REMOTE OFFICES':
-      (primary = Colors.primaryRem), (secondary = Colors.secondaryRem);
-      break;
-    default:
-      (primary = ''), (secondary = ''), (branchImage = '');
-  }
-
+function PositionGridTile({ position, color, image, onPress }) {
   return (
-    <LinearGradient style={styles.gridPosition} colors={[primary, secondary]}>
+    <LinearGradient style={styles.gridPosition} colors={color}>
       <ImageBackground
-        source={require('../assets/brachesImages/executive.png')}
+        source={image}
         resizeMode="stretch"
         style={styles.innerContainer}
         imageStyle={styles.backgroundImage}>
         <Pressable style={styles.buttonBox} onPress={onPress}>
           <View style={styles.innerContainer}>
-            <Text>{position}</Text>
+            <Text style={styles.text}>{position}</Text>
           </View>
         </Pressable>
       </ImageBackground>
@@ -62,6 +42,7 @@ const styles = StyleSheet.create({
   },
   buttonBox: {
     flex: 1,
+    width: '100%',
   },
   innerContainer: {
     flex: 1,
@@ -69,6 +50,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   backgroundImage: {
-    opacity: 0.15,
+    opacity: 0.3,
+  },
+  text: {
+    color: 'black',
+    fontWeight: 'bold',
+    fontSize: 15,
+    padding: 5,
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    borderRadius: 10,
   },
 });
