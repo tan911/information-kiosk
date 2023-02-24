@@ -4,11 +4,11 @@
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
-    "format": "prettier . --write",
-    "lint": "eslint .",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "format": "prettier . --write",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@react-navigation/native": "^6.1.4",
