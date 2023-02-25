@@ -11,7 +11,7 @@ function DepartmentsOverviewScreen({ route }) {
   });
 
   const renderDepartments = (data) => {
-    return <DisplayedDepartment title={data.item.title} />;
+    return <DisplayedDepartment title={data.item.title}/>;
   };
 
   return (
