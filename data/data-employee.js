@@ -42,7 +42,7 @@ export const DEPARTMENTS = [
     ['b1'],
     'PROTOCOL',
     'imageMAP',
-    ['Dept. Head/OIC: Ms. Cinbeth E. Orellano'],
+    ['Ms. Cinbeth E. Orellano'],
     ['local 1101 / 411-0160'],
     'Ground Floor'
   ),
@@ -51,25 +51,17 @@ export const DEPARTMENTS = [
     ['b1'],
     'SISTER CITY',
     'imageMAP',
-    ['Dept. Head/OIC: Ms. Carla Henry Aman'],
+    ['Ms. Carla Henry Aman'],
     ['local 1101'],
     'Ground floor'
   ),
-  new Directory(
-    'd4',
-    ['b1'],
-    'ASAP/BRT',
-    'imageMAP',
-    ['Engr. Jose R. Rizal'],
-    ['021312321313'],
-    'Ground Floor'
-  ),
+  new Directory('d4', ['b1'], 'ASAP/BRT', 'imageMAP', ['No.'], ['No'], 'Ground Floor'),
   new Directory(
     'd5',
     ['b1'],
     'CIVIL SECURITY UNIT',
     'imageMAP',
-    ['Dept. Head/OIC: Mr. Vicente B. Esmena'],
+    ['Mr. Vicente B. Esmena'],
     ['No.'],
     'Ground Floor'
   ),
@@ -78,7 +70,7 @@ export const DEPARTMENTS = [
     ['b1'],
     'CITY ADMINISTRATOR’S OFFICE',
     'imageMAP',
-    ['Acting City Administrator: Engr. Ma. Suzanne O. Ardosa'],
+    ['Engr. Ma. Suzanne O. Ardosa'],
     ['local 1206/1201, local 1210'],
     'Second Floor'
   ),
@@ -96,7 +88,7 @@ export const DEPARTMENTS = [
     ['b1'],
     'BUDGET OFFICE',
     'imageMAP',
-    ['Dept. Head: Ms. Marietta L. Gumia', 'Gilbert/Daisy'],
+    ['Ms. Marietta L. Gumia', 'Gilbert/Daisy'],
     ['local 1301 - Ms. Marietta L. Gumia', 'local 1303/1304/1305/1311 - Gilbert/Daisy'],
     'Third Floor'
   ),
@@ -114,7 +106,7 @@ export const DEPARTMENTS = [
     ['b1'],
     'HRDO',
     'imageMAP',
-    ['Dept. Head/OIC: (Training) Ms. Remedios Vestil Mondigo', '(Ann) Employee Verification'],
+    ['(Training) Ms. Remedios Vestil Mondigo', '(Ann) Employee Verification'],
     [
       'local 1302/1312 - (Ann) Employee Verification',
       'local 1307 - Ms. Remedios Vestil Mondigo',
@@ -128,7 +120,7 @@ export const DEPARTMENTS = [
     ['b1'],
     'CITY ASSESSORS',
     'imageMAP',
-    ['Dept. Head/OIC: Ms. Leizl J. Calamba'],
+    ['Ms. Leizl J. Calamba'],
     ['Local 1403/1404/1405'],
     'Fourth Floor'
   ),
@@ -137,7 +129,7 @@ export const DEPARTMENTS = [
     ['b1'],
     'LOCAL BOARD ASSESSMENT APPEALS',
     'imageMAP',
-    ['Dept. Head/OIC: Ms. Aileen B. Bordaje'],
+    ['Ms. Aileen B. Bordaje'],
     ['254-8682'],
     'Fourth Floor'
   ),
@@ -146,7 +138,7 @@ export const DEPARTMENTS = [
     ['b1'],
     'PEACE AND ORDER PROGRAM (POP)',
     'imageMAP',
-    ['Dept. Head/OIC: Mr. Pastor Alcover, Jr. III'],
+    ['Mr. Pastor Alcover, Jr. III'],
     ['No.'],
     'Fourth Floor'
   ),
@@ -155,7 +147,7 @@ export const DEPARTMENTS = [
     ['b1'],
     'MICS (Management Information and Computer Services)',
     'imageMAP',
-    ['Dept. Head/OIC: Mr. Richter V. Castañares'],
+    ['Mr. Richter V. Castañares'],
     ['No.'],
     'Fifth Floor'
   ),
@@ -178,7 +170,7 @@ export const DEPARTMENTS = [
     ['b1'],
     'LAND MANAGEMENT OFFICE',
     'imageMAP',
-    ['Dept. Head/OIC: Atty. Janeses Ponce'],
+    ['Atty. Janeses Ponce'],
     ['1517'],
     'Fifth Floor'
   ),
@@ -187,7 +179,7 @@ export const DEPARTMENTS = [
     ['b1'],
     'CITY ARCHITECT OFFICE',
     'imageMAP',
-    ['Dept. Head/OIC: Archt. Eleazar R. Lipang'],
+    ['Archt. Eleazar R. Lipang'],
     ['1512'],
     'Fifth Floor'
   ),
@@ -196,7 +188,7 @@ export const DEPARTMENTS = [
     ['b1'],
     'BANTAY DAGAT (ADMIN)',
     'imageMAP',
-    ['Dept. Head/OIC: Mr. Alexander Soledad'],
+    ['Mr. Alexander Soledad'],
     ['No.'],
     'Fifth Floor'
   ),
@@ -205,7 +197,7 @@ export const DEPARTMENTS = [
     ['b1'],
     'ACCOUNTING OFFICE',
     'imageMAP',
-    ['Dept. Head/OIC: Mr. Jerome V. Ornopia, CPA, MBA'],
+    ['Mr. Jerome V. Ornopia, CPA, MBA'],
     [
       'local 1612/412-2539/254-9871/412-1849 (Neri)',
       'local 1601 (Head) to 1611/1608/ 1603/1604/1605',
@@ -217,7 +209,7 @@ export const DEPARTMENTS = [
     ['b1'],
     'IASO (Internal Audit Service Office)',
     'imageMAP',
-    ['Dept. Head/OIC: Ms. Veronica A. Morelos'],
+    ['Ms. Veronica A. Morelos'],
     ['1702', '1710/412-2823/255-3092/253-2853'],
     'Seventh Floor'
   ),
@@ -226,7 +218,7 @@ export const DEPARTMENTS = [
     ['b1'],
     'GSO (General Service Office)',
     'imageMAP',
-    ['Dept. Head/OIC: Engr. Rolando S. Ardosa'],
+    ['Engr. Rolando S. Ardosa'],
     ['No.'],
     'Sevent Floor'
   ),
@@ -302,7 +294,7 @@ export const DEPARTMENTS = [
     ['b1'],
     'CITY PLANNING & DEV. OFFICE (CPDO)',
     'imageMAP',
-    ['Dept. Head/OIC: Archt. Joseph Michael P. Espina', 'Archt. Ann Marie Y. Cuizon (Asst.)'],
+    ['Archt. Joseph Michael P. Espina', 'Archt. Ann Marie Y. Cuizon (Asst.)'],
     ['local 1812/1811/254-8637'],
     'Eight Floor'
   ),
@@ -311,7 +303,7 @@ export const DEPARTMENTS = [
     ['b1'],
     'SRP MANAGEMENT CEBU CITY HILLYLAND',
     'imageMAP',
-    ['Dept. Head/OIC: Mr. Roberto Varquez'],
+    ['Mr. Roberto Varquez'],
     ['318-7171'],
     'Eight Floor'
   ),
@@ -320,7 +312,7 @@ export const DEPARTMENTS = [
     ['b1'],
     'CCCWPC (Cebu City Commission of the Welfare of Protection of Children)',
     'imageMAP',
-    ['Dept. Head/OIC: Ms. Helen B. Francisco'],
+    ['Ms. Helen B. Francisco'],
     ['253-2703 '],
     'Eight Floor'
   ),
@@ -347,7 +339,7 @@ export const DEPARTMENTS = [
     ['b2'],
     'Bldg. Maintenance Services',
     'imageMAP',
-    'Dept. Head/OIC: Engr. Leah Rondez',
+    'Engr. Leah Rondez',
     '412-1774/256-2699',
     'Ground Floor'
   ),
