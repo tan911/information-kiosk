@@ -1,11 +1,22 @@
-import { View, Text, Pressable, StyleSheet } from 'react-native'; 
+import { View, Text, Pressable, StyleSheet } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-function DisplayedDepartment({ title }) {
+function DisplayedDepartment({ id, title }) {
+  const navigation = useNavigation();
+
+  const pressHandler = () => {
+    navigation.navigate('Detail', {
+      id: id,
+    });
+  };
+
   return (
     <View style={styles.container}>
-      <Pressable android_ripple={{color: '#ccc'}} style={(({pressed}) => 
-        pressed ? styles.buttonPressed : null
-      )}>
+      <Pressable
+        onPress={pressHandler}
+        android_ripple={{ color: '#ccc' }}
+        style={({ pressed }) => (pressed ? styles.buttonPressed : null)}
+      >
         <View style={styles.innerContainer}>
           <Text style={styles.title}>{title}</Text>
         </View>
@@ -29,7 +40,7 @@ const styles = StyleSheet.create({
   innerContainer: {
     paddingVertical: 50,
     paddingHorizontal: 10,
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   title: {
     fontWeight: 'bold',
@@ -37,6 +48,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   buttonPressed: {
-    opacity: 0.5
-  }
+    opacity: 0.5,
+  },
 });
