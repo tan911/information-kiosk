@@ -11,7 +11,14 @@ function DepartmentsOverviewScreen({ route }) {
   });
 
   const renderDepartments = (data) => {
-    return <DisplayedDepartment title={data.item.title}/>;
+    const item = data.item;
+
+    const detail = {
+      id: item.id,
+      title: item.title,
+    };
+
+    return <DisplayedDepartment {...detail} />;
   };
 
   return (
