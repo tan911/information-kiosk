@@ -1,5 +1,5 @@
 class Directory {
-  constructor(id, departmentIds, title, departmentHead, contactNumber, imageMap, location) {
+  constructor(id, departmentIds, title, imageMap, departmentHead, contactNumber, location) {
     this.id = id;
     this.departmentIds = departmentIds;
     this.title = title;
